@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tourism.css">
+</head>
+<body class="bobody">
+    <script>
+        function sub(){
+            var a= document.getElementById('Email').value;
+            var b= document.getElementById('mob').value;
+            var c= document.getElementById('pass').value;
+            var d= document.getElementById('cnfm').value;
+            var e= document.getElementById('dat').value;
+           
+            if (a=="" || b=="" || c=="" || d=="" || e==""){
+                alert("All fields are mandatory");
+                return false;
+
+            }
+            else if(b.length<10 || b.length>10){
+                alert("Mobile number should be of 10 digits.");
+                return false;
+            }
+            else if(isNaN(b)){
+                alert("Mobile number should be digits only");
+
+                return false;
+            }
+            else if(c!=d){
+                alert("Please enter the same password");
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+        
+    </script>
+    
+    <h1 id="bookyourtrip">Book Your Trip</h1>
+    
+    <div class="bookingdiv">
+    
+
+    
+    <form onsubmit="return sub()" action="home.html" method="get">
+        
+        <label for="Email">Email: </label><br>
+        <input type="text" id="Email" class="bo" placeholder="Email"><br>
+        
+        <label for="password">password: </label><br>
+        <input type="password" id="pass" class="bo" placeholder="password"><br>
+        <label for="cnfm">Confirm password: </label><br>
+        <input type="password" id="cnfm" class="bo" placeholder="password"><br>
+        <label for="mob">Mobile No: </label><br>
+        <input type="number" id="mob" class="bo" placeholder="Mobile Number"><br>
+        <label for="date">Date of travel: </label><br>
+        <input type="date" id="dat" class="bo"><br>
+        <label for="file" id="lab">Payment recipt:</label>
+        <input type="file" id="f" class="bo">
+        <input type="submit" value="submit form" class="bo" id="submit">
+        <input type="reset" value="reset" class="bo" id="reset"><br><br>
+        <a href="home.html" class="bo" id="ho">HOME</a>
+      
+    </form>
+   
+    <div class="payment">
+        <p class="paymentpay"><u>Pay Here</u></p>
+        <img src="../images/payment.png" class="paymentimg">
+
+    </div>
+    
+    </div> 
+  
+
+    
+   
+
+</body>
+</html>

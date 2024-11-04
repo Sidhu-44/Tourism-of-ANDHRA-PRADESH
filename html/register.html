@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tourism.css">
+</head>
+<body class="logb">
+    <nav class="new">
+        <div class="logo">
+            Tourism AP
+
+        </div>
+        <div class="kin11">
+            <a href="home.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="culture.html">Culture</a>
+            <a href="food.html">Food</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="registernew">
+            <a href="register.html">register</a>
+        </div>
+    </nav>
+
+    <script>
+        function sub(){
+            var a= document.getElementById('e').value;
+            var b= document.getElementById('p').value;
+            var c= document.getElementById('sele').value;
+            var d= document.getElementById('ad').value;
+           
+            if (a=="" || b=="" || c=="" || d==""){
+                alert("All fields are mandatory");
+                return false;
+
+            }
+            else if(c=="select"){
+                alert("Please! select the STATE");
+
+                return false;
+            }
+            
+            else{
+                return true;
+            }
+
+        }
+    </script>
+    
+   
+
+
+
+
+
+
+
+
+    <div id="d2" style="height: 560px;">
+        <form name="myform" onsubmit="return(sub())" action="home.html">
+            
+            <label for="email" id="email">Email: </label>
+            <input type="email" placeholder="Email" id="e"><br><br>
+            <label for="password" id="password">Password: </label>
+            <input type="password" id="p" placeholder="password"><br><br>
+            
+            <label for="cities" >Select State:
+
+            </label>
+            <select type="cities" class="s" id="sele">
+                <option value="select">select</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Ladakh">Ladakh</option>
+
+                                
+
+
+
+            </select><br><br>
+            
+         
+            <label for="address" class="ad">
+                Address: 
+            </label><br>
+            <textarea name="address" rows="5" cols="30" placeholder="Address" id="ad"></textarea><br><br>
+
+            
+            <input type="submit" id="su">
+
+           
+        </form>
+    </div><br><br>
+ 
+    
+</body>
+</html>
