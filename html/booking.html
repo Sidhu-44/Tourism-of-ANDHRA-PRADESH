@@ -14,6 +14,7 @@
             var c= document.getElementById('pass').value;
             var d= document.getElementById('cnfm').value;
             var e= document.getElementById('dat').value;
+            var k=document.getElementBYId('f').value;
            
             if (a=="" || b=="" || c=="" || d=="" || e==""){
                 alert("All fields are mandatory");
@@ -27,10 +28,15 @@
             else if(isNaN(b)){
                 alert("Mobile number should be digits only");
 
+                
                 return false;
             }
             else if(c!=d){
                 alert("Please enter the same password");
+                return false;
+            }
+            else if(k==""){
+                alert("please uplode the payment recipt!);
                 return false;
             }
             else{
